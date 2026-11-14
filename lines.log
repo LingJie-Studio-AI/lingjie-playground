@@ -1,0 +1,15 @@
+86:     el.modelVision.style.display = m.vision ? "inline-flex" : "none";
+87:     el.uploadWrap.classList.toggle("show", !!m.vision);
+88:     buildMenu();
+89:     loadModel(m);
+90:   }
+91: 
+92:   el.modelBtn.addEventListener("click", () => el.pill.classList.toggle("open"));
+93:   document.addEventListener("click", (e) => {
+94:     if (!e.target.closest("#modelPill")) el.pill.classList.remove("open");
+95:   });
+96: 
+97:   /* ============ 权重加载 ============ */
+98:   async function loadModel(m) {
+99:     if (loadedModel === m.id) return;
+100:     loadedModel = "";

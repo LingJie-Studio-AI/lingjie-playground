@@ -1,0 +1,21 @@
+"点输入框旁的回形针上传图片，我可以看图回答。" : ""));
+    } catch (e) {
+      el.overlay.classList.remove("show");
+      setStatus("加载失败：" + e.message, true);
+    }
+  }
+
+  /* ============ 后端初始化 + GPU 自检 ============ */
+  async function initBackend(buffers) {
+    useGPU = el.gpuToggle.checked && !!navigator.gpu;
+    gpuOk = false;
+    gpu = null;
+    if (el.gpuToggle.checked && !navigator.gpu) {
+      setHint("此浏览器不支持 WebGPU，已回退 CPU 模式");
+    }
+    if (useGPU) {
+      try {
+        const adapter = await navigator.gpu.requestAdapter();
+        if (!adapter) { useGPU = false; throw new Error("无可用 GPU 适配器"); }
+        const device = await LJVGPU.requestDevice(adapter);
+        gpu = new LJVGPU(manifest, buffers, dev

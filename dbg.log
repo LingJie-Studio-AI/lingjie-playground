@@ -1,0 +1,6 @@
+ranks size 7930
+bytes->chars: "ä½łå¥½"
+pieces: [ '你好', '，', '请' ]
+bpe(你好): [ 'ä', '½', 'ł', 'å', '¥', '½' ]
+vocab has merged: 280 undefined
+encodePiece 你好: [ 166, 127, 260, 167, 104, 127 ]

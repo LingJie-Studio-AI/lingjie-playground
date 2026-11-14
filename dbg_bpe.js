@@ -1,0 +1,12 @@
+globalThis.window = globalThis;
+require("./lj-tokenizer.js");
+const fs = require("fs");
+const tok = new LJVTokenizer(fs.readFileSync("tokenizer.json", "utf-8"));
+console.log("ranks size", tok.ranks.size);
+const enc = tok._byteEncode("你好");
+console.log("bytes->chars:", JSON.stringify(enc));
+const pieces = "你好，请".match(/(?:'s|'t|'re|'ve|'m|'ll|'d)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+/gu);
+console.log("pieces:", pieces);
+console.log("bpe(你好):", tok._bpe(enc));
+console.log("vocab has merged:", tok.vocab["ä½"], tok.vocab["你好"]);
+console.log("encodePiece 你好:", tok.encodePiece("你好"));

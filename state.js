@@ -1,0 +1,11 @@
+const fs = require("fs");
+const s = fs.readFileSync("lj-gpu.js", "utf8");
+console.log("array<f16>:", (s.match(/array<f16>/g) || []).length);
+console.log("enable f16:", (s.match(/enable f16/g) || []).length);
+console.log("fp16 raw upload:", s.includes("const raw = this.u16.subarray"));
+console.log("biasOf:", s.includes("biasOf"));
+console.log("slice fp16:", s.includes("* 2, size:"));
+console.log("shader-f16:", s.includes("shader-f16"));
+const i = s.indexOf("gemm(aBuf");
+console.log("--- gemm method ---");
+console.log(s.slice(i, i + 700));

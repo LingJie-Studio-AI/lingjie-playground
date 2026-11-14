@@ -1,0 +1,5 @@
+new LJVGPU @ 7118
+PU = false; throw new Error("无可用 GPU 适配器"); }
+        const device = await LJVGPU.requestDevice(adapter);
+        gpu = new LJVGPU(manifest, buffers, device);
+        window.__ljdbg = { gpu: gpu, weig

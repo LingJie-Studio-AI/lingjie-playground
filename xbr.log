@@ -1,0 +1,9 @@
+467: const xb = this.scratch("x", T * D * 4);
+468: dev.queue.writeBuffer(xb, 0, x);
+469: const xout = await this._layers(xb, T, 0);
+479: const xb = this.scratch("x", D * 4);
+480: dev.queue.writeBuffer(xb, 0, x);
+481: const xout = await this._layers(xb, T, pos0);
+486: async _layers(xb, T, pos0) {
+488: let xcur = xb;
+602: this.run("rmsMean", [{ buffer: xb }, { buffer: inv }, { buffer: this.uni2(T, D) }], T);

@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LingJie 在线体验 · Playground</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='2' y='2' width='24' height='24' rx='7' fill='none' stroke='%2316181d' stroke-width='2'/%3E%3Cpath d='M14 6.5C17 10 17 18 14 21.5C11 18 11 10 14 6.5Z' fill='%230e7a4f'/%3E%3C/svg%3E">
+<script>
+(function(){try{var k="lj-theme",v=localStorage.getItem(k);
+var d=window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.setAttribute("data-theme",v||(d?"dark":"light"));
+}catch(e){}})();
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --paper:#ffffff; --paper2:#f7f7f6; --paper3:#eeeceb;
+  --ink:#14161a; --ink2:#4b4f57; --ink3:#8b8f97;
+  --line:#e7e5e2; --line2:#d8d5d1;
+  --accent:#0e7a4f; --accent2:#0a9e63; --accent-soft:#e9f3ee;
+  --danger:#c2453a; --warn:#b7791f;
+  --side-bg:#faf9f7; --card-bg:#ffffff;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Consolas,monospace;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#151920; --paper2:#161a20; --paper3:#1e232b;
+  --ink:#e9ebef; --ink2:#a8aeb8; --ink3:#757c87;
+  --line:#252b33; --line2:#333a44;
+  --accent:#3ddc97; --accent2:#2fd08c; --accent-soft:#11301f;
+  --danger:#f07366; --warn:#e0a44a;
+  --side-bg:#0b0d11; --card-bg:#151920;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--side-bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font-family:inherit;cursor:pointer;color:inherit}
+textarea,input,select{font-family:inherit}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--line2);border-radius:8px}
+
+#app{display:grid;grid-template-columns:268px 1fr;height:100vh}
+
+/* ---------- 侧栏 ---------- */
+#side{background:var(--side-bg);border-right:1px solid var(--line);display:flex;
+  flex-direction:column;padding:14px;overflow-y:auto}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1rem;padding:4px 6px 10px}
+.brand svg{width:24px;height:24px}
+.brand .tld{font-family:var(--mono);font-size:.68rem;color:var(--ink3);font-weight:400}
+#newChat{width:100%;background:var(--paper2);border:1px solid var(--line2);color:var(--ink);
+  border-radius:10px;padding:10px;font-size:.9rem;margin:4px 0 10px;transition:background .2s}
+#newChat:hover{background:var(--paper3)}
+.sec{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--ink3);
+  margin:14px 0 8px;padding-left:4px}
+.ctl{margin-bottom:14px;padding:0 4px}
+.ctl label{display:flex;justify-content:space-between;font-size:.8rem;color:var(--ink2);margin-bottom:6px}
+.ctl label b{font-family:var(--mono);font-weight:600;color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--accent);height:22px}
+.switch{position:relative;width:42px;height:24px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;border-radius:999px;background:var(--line2);transition:.25s;cursor:pointer}
+.slider::before{content:"";position:absolute;width:18px;height:18px;border-radius:50%;
+  background:var(--card-bg);top:3px;left:3px;transition:.25s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.switch input:checked + .slider{background:var(--accent)}
+.switch input:checked + .slider::before{transform:translateX(18px)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hint{font-size:.72rem;color:var(--ink3);line-height:1.5}
+#modelInfo{background:var(--card-bg);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:auto}
+#modelInfo h4{margin:0 0 8px;font-size:.82rem}
+#modelInfo .r{display:flex;justify-content:space-between;font-size:.76rem;padding:3px 0;color:var(--ink2)}
+#modelInfo .r b{font-family:var(--mono);color:var(--ink);font-weight:600}
+
+/* ---------- 主区 ---------- */
+#main{display:flex;flex-direction:column;background:var(--paper);min-width:0}
+.pill{position:relative}
+.mi{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;
+  padding:12px 16px;font-size:.86rem;transition:background .15s}
+.mi:hover:not(.disabled){background:var(--paper2)}
+.mi .nm{font-family:var(--mono);font-weight:600;font-size:.8rem}
+.mi .sub{font-size:.7rem;color:var(--ink3);margin-top:2px}
+.mi.disabled{opacity:.45;cursor:not-allowed}
+.mi .right{margin-left:auto}
+.mi.sel{background:var(--accent-soft)}
+.mc-vision{display:inline-flex;align-items:center;gap:6px}
+.mc-vision svg{width:15px;height:15px;color:var(--ink3)}
+.tag-soft{font-size:11px;line-height:1;padding:4px 8px;border-radius:999px;
+  background:var(--paper3);color:var(--ink3);border:1px solid var(--line);white-space:nowrap}
+[data-theme="dark"] .tag-soft{background:#1d222a;color:#98a0ab;border-color:#2c333d}
+
+#uploadWrap{display:flex;align-items:center;overflow:hidden;width:0;opacity:0;
+  transition:width .3s cubic-bezier(.22,1,.36,1),opacity .3s}
+#uploadWrap.show{width:44px;opacity:1}
+#uploadBtn{width:38px;height:38px;border-radius:999px;border:1px solid var(--line2);
+  background:var(--paper2);display:inline-flex;align-items:center;justify-content:center;color:var(--ink2)}
+#uploadBtn:hover{border-color:var(--accent);color:var(--accent)}
+.lockpill{display:flex;align-items:center;gap:7px;border:1px dashed var(--line2);color:var(--ink3);
+  border-radius:999px;padding:8px 14px;font-size:.8rem;cursor:not-allowed;user-select:none}
+.lockpill svg{width:14px;height:14px}
+
+#chat{flex:1;overflow-y:auto;display:flex;flex-direction:column;align-items:center;padding:24px 20px 12px}
+#greet{margin:auto;display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--ink)}
+#greet svg{width:44px;height:44px;color:var(--accent)}
+#greet h1{font-size:1.5rem;margin:0}
+#greet p{color:var(--ink3);font-size:.85rem;margin:0}
+.msg{width:min(760px,100%);margin:10px 0}
+.msg .who{font-size:.72rem;color:var(--ink3);margin-bottom:4px;font-family:var(--mono)}
+.msg .body{border-radius:14px;padding:12px 16px;font-size:.94rem;line-height:1.7;
+  white-space:pre-wrap;overflow-wrap:break-word}
+.msg.user .body{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}
+[data-theme="dark"] .msg.user .body{background:#12312233;border-color:#1e3d2f}
+.msg.assist .body{background:var(--paper2);border:1px solid var(--line)}
+.msg.assist .think{border-left:3px solid var(--line2);color:var(--ink3);font-size:.85rem;
+  padding:6px 10px;margin:0 0 8px;background:var(--paper3);border-radius:8px;white-space:pre-wrap}
+.msg .imgrow{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.msg .imgrow img{max-width:180px;max-height:180px;border-radius:10px;border:1px solid var(--line)}
+.cursor{display:inline-block;width:8px;height:1em;background:var(--accent);
+  vertical-align:text-bottom;animation:blink 1s steps(2) infinite;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+
+#inputbar{padding:10px 20px 16px;display:flex;justify-content:center}
+#inputbox{width:min(760px,100%);background:var(--paper2);border:1px solid var(--line2);
+  border-radius:16px;padding:12px 14px;transition:border-color .2s}
+#inputbox:focus-within{border-color:var(--accent)}
+#preview{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+#preview .chip{position:relative}
+#preview img{width:56px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+#preview .rm{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;
+  background:var(--danger);color:#fff;border:none;font-size:11px;line-height:1}
+#txt{width:100%;background:none;border:none;color:var(--ink);resize:none;font-size:.94rem;
+  outline:none;height:52px;line-height:1.55}
+#txt::placeholder{color:var(--ink3)}
+#toolbar{display:flex;align-items:center;gap:8px}
+.tleft{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1;min-width:0}
+#modelBtn{display:flex;align-items:center;gap:8px;background:none;border:1px solid var(--line2);
+  color:var(--ink);border-radius:999px;padding:7px 14px;font-size:.82rem;font-weight:600;
+  transition:border-color .2s,background .2s}
+#modelBtn:hover{border-color:var(--accent);background:var(--paper2)}
+#modelMenu{position:absolute;bottom:calc(100% + 8px);left:0;min-width:360px;z-index:50;
+  background:var(--card-bg);border:1px solid var(--line);border-radius:14px;
+  box-shadow:0 -12px 44px rgba(0,0,0,.16);display:none;overflow:hidden}
+.pill.open #modelMenu{display:block}
+.lockpill{display:flex;align-items:center;gap:7px;border:1px dashed var(--line2);color:var(--ink3);
+  border-radius:999px;padding:7px 14px;font-size:.8rem;cursor:not-allowed;user-select:none;white-space:nowrap}
+.lockpill svg{width:14px;height:14px}
+#send{margin-left:auto;width:40px;height:40px;border-radius:999px;border:none;
+  background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;
+  transition:opacity .2s,transform .2s}
+[data-theme="dark"] #send{color:#06231a}
+#send:hover{transform:translateY(-1px)}
+#send:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+#status{padding:0 20px 8px;text-align:center;font-size:.72rem;color:var(--ink3)}
+#status.err{color:var(--danger)}
+
+/* 下载遮罩 */
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);
+  display:none;align-items:center;justify-content:center;z-index:200}
+#overlay.show{display:flex}
+#dlcard{width:min(420px,90vw);background:var(--card-bg);border:1px solid var(--line);
+  border-radius:16px;padding:24px}
+#dlcard h3{margin:0 0 6px;font-size:1rem}
+#dlcard .sub{color:var(--ink3);font-size:.78rem;margin-bottom:14px}
+#bar{height:8px;border-radius:6px;background:var(--paper3);overflow:hidden}
+#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:6px;transition:width .15s}
+#dlmsg{font-family:var(--mono);font-size:.72rem;color:var(--ink3);margin-top:10px}
+
+@media (max-width:860px){
+  #app{grid-template-columns:1fr}
+  #side{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <div class="brand">
+      <svg viewBox="0 0 28 28"><rect x="2" y="2" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 6.5C17 10 17 18 14 21.5C11 18 11 10 14 6.5Z" fill="var(--accent)"/></svg>
+      LingJie<span class="tld">.xyz</span>
+    </div>
+    <button id="newChat">＋ 开启新对话</button>
+
+    <div class="sec">生成参数</div>
+    <div class="ctl">
+      <label>温度 <b id="tempV">0.70</b></label>
+      <input type="range" id="temp" min="0" max="1.5" step="0.05" value="0.7">
+    </div>
+    <div class="ctl">
+      <label>Top-P <b id="toppV">0.90</b></label>
+      <input type="range" id="topp" min="0.5" max="1" step="0.05" value="0.9">
+    </div>
+    <div class="ctl">
+      <label>重复惩罚 <b id="repV">1.15</b></label>
+      <input type="range" id="rep" min="1" max="1.5" step="0.05" value="1.15">
+    </div>
+    <div class="ctl">
+      <label>最大生成长度 <b id="maxnV">180</b></label>
+      <input type="range" id="maxn" min="32" max="256" step="16" value="180">
+    </div>
+
+    <div class="sec">推理</div>
+    <div class="ctl row">
+      <span style="font-size:.8rem;color:var(--ink2)">WebGPU 加速</span>
+      <label class="switch"><input type="checkbox" id="gpuToggle"><span class="slider"></span></label>
+    </div>
+    <p class="hint" id="backendHint">检测中…</p>
+
+    <div id="modelInfo">
+      <h4>当前模型</h4>
+      <div class="r"><span>参数</span><b id="miParams">—</b></div>
+      <div class="r"><span>上下文</span><b id="miCtx">—</b></div>
+      <div class="r"><span>后端</span><b id="miBackend">—</b></div>
+      <div class="r"><span>生成速度</span><b id="miSpeed">—</b></div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <div id="chat">
+      <div id="greet">
+        <svg viewBox="0 0 28 28"><rect x="2" y="2" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 6.5C17 10 17 18 14 21.5C11 18 11 10 14 6.5Z" fill="currentColor"/></svg>
+        <h1>你好，让我们开始聊天吧</h1>
+        <p id="greetSub">先在左上角选择一个模型</p>
+      </div>
+    </div>
+
+    <div id="status"></div>
+    <div id="inputbar">
+      <div id="inputbox">
+        <div id="preview"></div>
+        <textarea id="txt" placeholder="给 LingJie 发送消息…（Enter 发送，Shift+Enter 换行）"></textarea>
+        <div id="toolbar">
+          <div class="tleft">
+            <div class="pill" id="modelPill">
+              <button id="modelBtn">
+                <span class="name" id="modelName">选择模型</span>
+                <span id="modelVision" style="display:none" class="mc-vision">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+                  <span class="tag-soft">视觉</span>
+                </span>
+                <span class="caret">▲</span>
+              </button>
+              <div id="modelMenu"></div>
+            </div>
+            <div id="uploadWrap">
+              <button id="uploadBtn" title="上传图片（仅图片）" aria-label="上传图片">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.5-4.5L6 21"/></svg>
+              </button>
+              <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+            <div class="lockpill" title="带思维链的模型还在训练中，暂不可用">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+              深度思考
+            </div>
+          </div>
+          <span class="hint" id="ctxHint"></span>
+          <button id="send" disabled aria-label="发送">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="overlay">
+  <div id="dlcard">
+    <h3>正在加载模型权重</h3>
+    <div class="sub" id="dlsub">LingJieLV-Chat-v2-Flash · 153 MB（fp16，分 2 块）</div>
+    <div id="bar"><i></i></div>
+    <div id="dlmsg">准备中…</div>
+  </div>
+</div>
+
+<script src="lj-tokenizer.js?v=7"></script>
+<script src="lj-cpu.js?v=7"></script>
+<script src="lj-gpu.js?v=7"></script>
+<script src="lj-app.js?v=7"></script>
+</body>
+</html>

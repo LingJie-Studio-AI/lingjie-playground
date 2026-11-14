@@ -1,0 +1,24 @@
+t.unmap();
+      st.destroy();
+      return out;
+    }
+
+    scratch(key, bytes) {
+      bytes = Math.ceil(bytes / 4) * 4;
+      this._pool = this._pool || {};
+      if (!this._pool[key] || this._pool[key].size < bytes) {
+        if (this._pool[key]) this._pool[key].destroy();
+        this._pool[key] = this.device.createBuffer({
+          size: bytes, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC | GPUBufferUsage.COPY_DST,
+        });
+      }
+      return this._pool[key];
+    }
+
+    uni(a, b, c, d) {
+      const u = this.device.createBuffer({ size: 16, usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST });
+      this.device.queue.writeBuffer(u, 0, dim4(a, b, c, d));
+      return u;
+    }
+    uni2(a, b) {
+      const u = this.device.createBuffer({ size: 8, usage: GPUBufferUsage.UNIFORM 

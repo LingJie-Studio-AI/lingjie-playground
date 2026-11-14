@@ -1,0 +1,2229 @@
+{
+ "dtype": "fp16",
+ "tensors": {
+  "blocks.0.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 0,
+   "bytes": 294912
+  },
+  "blocks.0.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 294912,
+   "bytes": 884736
+  },
+  "blocks.0.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 1179648,
+   "bytes": 3072
+  },
+  "blocks.0.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 1182720,
+   "bytes": 2162688
+  },
+  "blocks.0.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 3345408,
+   "bytes": 2162688
+  },
+  "blocks.0.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 5508096,
+   "bytes": 768
+  },
+  "blocks.0.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 5508864,
+   "bytes": 768
+  },
+  "blocks.1.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 5509632,
+   "bytes": 294912
+  },
+  "blocks.1.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 5804544,
+   "bytes": 884736
+  },
+  "blocks.1.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 6689280,
+   "bytes": 3072
+  },
+  "blocks.1.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 6692352,
+   "bytes": 2162688
+  },
+  "blocks.1.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 8855040,
+   "bytes": 2162688
+  },
+  "blocks.1.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 11017728,
+   "bytes": 768
+  },
+  "blocks.1.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 11018496,
+   "bytes": 768
+  },
+  "blocks.10.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 11019264,
+   "bytes": 294912
+  },
+  "blocks.10.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 11314176,
+   "bytes": 884736
+  },
+  "blocks.10.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 12198912,
+   "bytes": 3072
+  },
+  "blocks.10.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 12201984,
+   "bytes": 2162688
+  },
+  "blocks.10.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 14364672,
+   "bytes": 2162688
+  },
+  "blocks.10.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 16527360,
+   "bytes": 768
+  },
+  "blocks.10.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 16528128,
+   "bytes": 768
+  },
+  "blocks.11.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 16528896,
+   "bytes": 294912
+  },
+  "blocks.11.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 16823808,
+   "bytes": 884736
+  },
+  "blocks.11.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 17708544,
+   "bytes": 3072
+  },
+  "blocks.11.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 17711616,
+   "bytes": 2162688
+  },
+  "blocks.11.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 19874304,
+   "bytes": 2162688
+  },
+  "blocks.11.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 22036992,
+   "bytes": 768
+  },
+  "blocks.11.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 22037760,
+   "bytes": 768
+  },
+  "blocks.2.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 22038528,
+   "bytes": 294912
+  },
+  "blocks.2.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 22333440,
+   "bytes": 884736
+  },
+  "blocks.2.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 23218176,
+   "bytes": 3072
+  },
+  "blocks.2.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 23221248,
+   "bytes": 2162688
+  },
+  "blocks.2.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 25383936,
+   "bytes": 2162688
+  },
+  "blocks.2.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 27546624,
+   "bytes": 768
+  },
+  "blocks.2.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 27547392,
+   "bytes": 768
+  },
+  "blocks.3.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 27548160,
+   "bytes": 294912
+  },
+  "blocks.3.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 27843072,
+   "bytes": 884736
+  },
+  "blocks.3.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 28727808,
+   "bytes": 3072
+  },
+  "blocks.3.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 28730880,
+   "bytes": 2162688
+  },
+  "blocks.3.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 30893568,
+   "bytes": 2162688
+  },
+  "blocks.3.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 33056256,
+   "bytes": 768
+  },
+  "blocks.3.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 33057024,
+   "bytes": 768
+  },
+  "blocks.4.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 33057792,
+   "bytes": 294912
+  },
+  "blocks.4.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 33352704,
+   "bytes": 884736
+  },
+  "blocks.4.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 34237440,
+   "bytes": 3072
+  },
+  "blocks.4.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 34240512,
+   "bytes": 2162688
+  },
+  "blocks.4.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 36403200,
+   "bytes": 2162688
+  },
+  "blocks.4.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 38565888,
+   "bytes": 768
+  },
+  "blocks.4.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 38566656,
+   "bytes": 768
+  },
+  "blocks.5.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 38567424,
+   "bytes": 294912
+  },
+  "blocks.5.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 38862336,
+   "bytes": 884736
+  },
+  "blocks.5.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 39747072,
+   "bytes": 3072
+  },
+  "blocks.5.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 39750144,
+   "bytes": 2162688
+  },
+  "blocks.5.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 41912832,
+   "bytes": 2162688
+  },
+  "blocks.5.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 44075520,
+   "bytes": 768
+  },
+  "blocks.5.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 44076288,
+   "bytes": 768
+  },
+  "blocks.6.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 44077056,
+   "bytes": 294912
+  },
+  "blocks.6.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 44371968,
+   "bytes": 884736
+  },
+  "blocks.6.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 45256704,
+   "bytes": 3072
+  },
+  "blocks.6.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 45259776,
+   "bytes": 2162688
+  },
+  "blocks.6.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 47422464,
+   "bytes": 2162688
+  },
+  "blocks.6.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 49585152,
+   "bytes": 768
+  },
+  "blocks.6.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 49585920,
+   "bytes": 768
+  },
+  "blocks.7.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 49586688,
+   "bytes": 294912
+  },
+  "blocks.7.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 49881600,
+   "bytes": 884736
+  },
+  "blocks.7.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 50766336,
+   "bytes": 3072
+  },
+  "blocks.7.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 50769408,
+   "bytes": 2162688
+  },
+  "blocks.7.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 52932096,
+   "bytes": 2162688
+  },
+  "blocks.7.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 55094784,
+   "bytes": 768
+  },
+  "blocks.7.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 55095552,
+   "bytes": 768
+  },
+  "blocks.8.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 55096320,
+   "bytes": 294912
+  },
+  "blocks.8.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 55391232,
+   "bytes": 884736
+  },
+  "blocks.8.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 56275968,
+   "bytes": 3072
+  },
+  "blocks.8.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 56279040,
+   "bytes": 2162688
+  },
+  "blocks.8.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 58441728,
+   "bytes": 2162688
+  },
+  "blocks.8.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 60604416,
+   "bytes": 768
+  },
+  "blocks.8.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 60605184,
+   "bytes": 768
+  },
+  "blocks.9.attn.o.weight": {
+   "shape": [
+    384,
+    384
+   ],
+   "offset": 60605952,
+   "bytes": 294912
+  },
+  "blocks.9.attn.qkv.weight": {
+   "shape": [
+    1152,
+    384
+   ],
+   "offset": 60900864,
+   "bytes": 884736
+  },
+  "blocks.9.moe.router.weight": {
+   "shape": [
+    4,
+    384
+   ],
+   "offset": 61785600,
+   "bytes": 3072
+  },
+  "blocks.9.moe.w1_t": {
+   "shape": [
+    4,
+    704,
+    384
+   ],
+   "offset": 61788672,
+   "bytes": 2162688
+  },
+  "blocks.9.moe.w2_t": {
+   "shape": [
+    4,
+    384,
+    704
+   ],
+   "offset": 63951360,
+   "bytes": 2162688
+  },
+  "blocks.9.norm1.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 66114048,
+   "bytes": 768
+  },
+  "blocks.9.norm2.weight": {
+   "shape": [
+    384
+   ],
+   "offset": 66114816,
+   "bytes": 768
+  },
+  "norm_f": {
+   "shape": [
+    384
+   ],
+   "offset": 66115584,
+   "bytes": 768
+  },
+  "proj.fc1.bias": {
+   "shape": [
+    768
+   ],
+   "offset": 66116352,
+   "bytes": 1536
+  },
+  "proj.fc1.weight": {
+   "shape": [
+    768,
+    512
+   ],
+   "offset": 66117888,
+   "bytes": 786432
+  },
+  "proj.fc2.bias": {
+   "shape": [
+    384
+   ],
+   "offset": 66904320,
+   "bytes": 768
+  },
+  "proj.fc2.weight": {
+   "shape": [
+    384,
+    768
+   ],
+   "offset": 66905088,
+   "bytes": 589824
+  },
+  "tok_emb": {
+   "shape": [
+    8192,
+    384
+   ],
+   "offset": 67494912,
+   "bytes": 6291456
+  },
+  "vis.class_embedding": {
+   "shape": [
+    512
+   ],
+   "offset": 73786368,
+   "bytes": 1024
+  },
+  "vis.layers.0.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 73787392,
+   "bytes": 1024
+  },
+  "vis.layers.0.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 73788416,
+   "bytes": 1024
+  },
+  "vis.layers.0.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 73789440,
+   "bytes": 1024
+  },
+  "vis.layers.0.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 73790464,
+   "bytes": 1024
+  },
+  "vis.layers.0.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 73791488,
+   "bytes": 4096
+  },
+  "vis.layers.0.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 73795584,
+   "bytes": 2097152
+  },
+  "vis.layers.0.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 75892736,
+   "bytes": 1024
+  },
+  "vis.layers.0.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 75893760,
+   "bytes": 2097152
+  },
+  "vis.layers.0.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 77990912,
+   "bytes": 1024
+  },
+  "vis.layers.0.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 77991936,
+   "bytes": 524288
+  },
+  "vis.layers.0.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 78516224,
+   "bytes": 1024
+  },
+  "vis.layers.0.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 78517248,
+   "bytes": 524288
+  },
+  "vis.layers.0.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 79041536,
+   "bytes": 1024
+  },
+  "vis.layers.0.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 79042560,
+   "bytes": 524288
+  },
+  "vis.layers.0.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 79566848,
+   "bytes": 1024
+  },
+  "vis.layers.0.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 79567872,
+   "bytes": 524288
+  },
+  "vis.layers.1.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 80092160,
+   "bytes": 1024
+  },
+  "vis.layers.1.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 80093184,
+   "bytes": 1024
+  },
+  "vis.layers.1.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 80094208,
+   "bytes": 1024
+  },
+  "vis.layers.1.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 80095232,
+   "bytes": 1024
+  },
+  "vis.layers.1.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 80096256,
+   "bytes": 4096
+  },
+  "vis.layers.1.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 80100352,
+   "bytes": 2097152
+  },
+  "vis.layers.1.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 82197504,
+   "bytes": 1024
+  },
+  "vis.layers.1.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 82198528,
+   "bytes": 2097152
+  },
+  "vis.layers.1.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 84295680,
+   "bytes": 1024
+  },
+  "vis.layers.1.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 84296704,
+   "bytes": 524288
+  },
+  "vis.layers.1.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 84820992,
+   "bytes": 1024
+  },
+  "vis.layers.1.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 84822016,
+   "bytes": 524288
+  },
+  "vis.layers.1.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 85346304,
+   "bytes": 1024
+  },
+  "vis.layers.1.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 85347328,
+   "bytes": 524288
+  },
+  "vis.layers.1.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 85871616,
+   "bytes": 1024
+  },
+  "vis.layers.1.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 85872640,
+   "bytes": 524288
+  },
+  "vis.layers.10.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 86396928,
+   "bytes": 1024
+  },
+  "vis.layers.10.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 86397952,
+   "bytes": 1024
+  },
+  "vis.layers.10.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 86398976,
+   "bytes": 1024
+  },
+  "vis.layers.10.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 86400000,
+   "bytes": 1024
+  },
+  "vis.layers.10.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 86401024,
+   "bytes": 4096
+  },
+  "vis.layers.10.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 86405120,
+   "bytes": 2097152
+  },
+  "vis.layers.10.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 88502272,
+   "bytes": 1024
+  },
+  "vis.layers.10.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 88503296,
+   "bytes": 2097152
+  },
+  "vis.layers.10.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 90600448,
+   "bytes": 1024
+  },
+  "vis.layers.10.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 90601472,
+   "bytes": 524288
+  },
+  "vis.layers.10.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 91125760,
+   "bytes": 1024
+  },
+  "vis.layers.10.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 91126784,
+   "bytes": 524288
+  },
+  "vis.layers.10.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 91651072,
+   "bytes": 1024
+  },
+  "vis.layers.10.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 91652096,
+   "bytes": 524288
+  },
+  "vis.layers.10.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 92176384,
+   "bytes": 1024
+  },
+  "vis.layers.10.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 92177408,
+   "bytes": 524288
+  },
+  "vis.layers.11.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 92701696,
+   "bytes": 1024
+  },
+  "vis.layers.11.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 92702720,
+   "bytes": 1024
+  },
+  "vis.layers.11.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 92703744,
+   "bytes": 1024
+  },
+  "vis.layers.11.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 92704768,
+   "bytes": 1024
+  },
+  "vis.layers.11.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 92705792,
+   "bytes": 4096
+  },
+  "vis.layers.11.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 92709888,
+   "bytes": 2097152
+  },
+  "vis.layers.11.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 94807040,
+   "bytes": 1024
+  },
+  "vis.layers.11.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 94808064,
+   "bytes": 2097152
+  },
+  "vis.layers.11.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 96905216,
+   "bytes": 1024
+  },
+  "vis.layers.11.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 96906240,
+   "bytes": 524288
+  },
+  "vis.layers.11.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 97430528,
+   "bytes": 1024
+  },
+  "vis.layers.11.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 97431552,
+   "bytes": 524288
+  },
+  "vis.layers.11.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 97955840,
+   "bytes": 1024
+  },
+  "vis.layers.11.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 97956864,
+   "bytes": 524288
+  },
+  "vis.layers.11.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 98481152,
+   "bytes": 1024
+  },
+  "vis.layers.11.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 98482176,
+   "bytes": 524288
+  },
+  "vis.layers.2.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 99006464,
+   "bytes": 1024
+  },
+  "vis.layers.2.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 99007488,
+   "bytes": 1024
+  },
+  "vis.layers.2.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 99008512,
+   "bytes": 1024
+  },
+  "vis.layers.2.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 99009536,
+   "bytes": 1024
+  },
+  "vis.layers.2.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 99010560,
+   "bytes": 4096
+  },
+  "vis.layers.2.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 99014656,
+   "bytes": 2097152
+  },
+  "vis.layers.2.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 101111808,
+   "bytes": 1024
+  },
+  "vis.layers.2.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 101112832,
+   "bytes": 2097152
+  },
+  "vis.layers.2.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 103209984,
+   "bytes": 1024
+  },
+  "vis.layers.2.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 103211008,
+   "bytes": 524288
+  },
+  "vis.layers.2.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 103735296,
+   "bytes": 1024
+  },
+  "vis.layers.2.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 103736320,
+   "bytes": 524288
+  },
+  "vis.layers.2.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 104260608,
+   "bytes": 1024
+  },
+  "vis.layers.2.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 104261632,
+   "bytes": 524288
+  },
+  "vis.layers.2.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 104785920,
+   "bytes": 1024
+  },
+  "vis.layers.2.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 104786944,
+   "bytes": 524288
+  },
+  "vis.layers.3.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 105311232,
+   "bytes": 1024
+  },
+  "vis.layers.3.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 105312256,
+   "bytes": 1024
+  },
+  "vis.layers.3.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 105313280,
+   "bytes": 1024
+  },
+  "vis.layers.3.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 105314304,
+   "bytes": 1024
+  },
+  "vis.layers.3.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 105315328,
+   "bytes": 4096
+  },
+  "vis.layers.3.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 105319424,
+   "bytes": 2097152
+  },
+  "vis.layers.3.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 107416576,
+   "bytes": 1024
+  },
+  "vis.layers.3.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 107417600,
+   "bytes": 2097152
+  },
+  "vis.layers.3.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 109514752,
+   "bytes": 1024
+  },
+  "vis.layers.3.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 109515776,
+   "bytes": 524288
+  },
+  "vis.layers.3.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 110040064,
+   "bytes": 1024
+  },
+  "vis.layers.3.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 110041088,
+   "bytes": 524288
+  },
+  "vis.layers.3.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 110565376,
+   "bytes": 1024
+  },
+  "vis.layers.3.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 110566400,
+   "bytes": 524288
+  },
+  "vis.layers.3.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 111090688,
+   "bytes": 1024
+  },
+  "vis.layers.3.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 111091712,
+   "bytes": 524288
+  },
+  "vis.layers.4.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 111616000,
+   "bytes": 1024
+  },
+  "vis.layers.4.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 111617024,
+   "bytes": 1024
+  },
+  "vis.layers.4.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 111618048,
+   "bytes": 1024
+  },
+  "vis.layers.4.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 111619072,
+   "bytes": 1024
+  },
+  "vis.layers.4.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 111620096,
+   "bytes": 4096
+  },
+  "vis.layers.4.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 111624192,
+   "bytes": 2097152
+  },
+  "vis.layers.4.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 113721344,
+   "bytes": 1024
+  },
+  "vis.layers.4.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 113722368,
+   "bytes": 2097152
+  },
+  "vis.layers.4.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 115819520,
+   "bytes": 1024
+  },
+  "vis.layers.4.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 115820544,
+   "bytes": 524288
+  },
+  "vis.layers.4.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 116344832,
+   "bytes": 1024
+  },
+  "vis.layers.4.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 116345856,
+   "bytes": 524288
+  },
+  "vis.layers.4.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 116870144,
+   "bytes": 1024
+  },
+  "vis.layers.4.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 116871168,
+   "bytes": 524288
+  },
+  "vis.layers.4.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 117395456,
+   "bytes": 1024
+  },
+  "vis.layers.4.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 117396480,
+   "bytes": 524288
+  },
+  "vis.layers.5.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 117920768,
+   "bytes": 1024
+  },
+  "vis.layers.5.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 117921792,
+   "bytes": 1024
+  },
+  "vis.layers.5.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 117922816,
+   "bytes": 1024
+  },
+  "vis.layers.5.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 117923840,
+   "bytes": 1024
+  },
+  "vis.layers.5.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 117924864,
+   "bytes": 4096
+  },
+  "vis.layers.5.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 117928960,
+   "bytes": 2097152
+  },
+  "vis.layers.5.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 120026112,
+   "bytes": 1024
+  },
+  "vis.layers.5.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 120027136,
+   "bytes": 2097152
+  },
+  "vis.layers.5.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 122124288,
+   "bytes": 1024
+  },
+  "vis.layers.5.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 122125312,
+   "bytes": 524288
+  },
+  "vis.layers.5.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 122649600,
+   "bytes": 1024
+  },
+  "vis.layers.5.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 122650624,
+   "bytes": 524288
+  },
+  "vis.layers.5.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 123174912,
+   "bytes": 1024
+  },
+  "vis.layers.5.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 123175936,
+   "bytes": 524288
+  },
+  "vis.layers.5.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 123700224,
+   "bytes": 1024
+  },
+  "vis.layers.5.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 123701248,
+   "bytes": 524288
+  },
+  "vis.layers.6.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 124225536,
+   "bytes": 1024
+  },
+  "vis.layers.6.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 124226560,
+   "bytes": 1024
+  },
+  "vis.layers.6.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 124227584,
+   "bytes": 1024
+  },
+  "vis.layers.6.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 124228608,
+   "bytes": 1024
+  },
+  "vis.layers.6.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 124229632,
+   "bytes": 4096
+  },
+  "vis.layers.6.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 124233728,
+   "bytes": 2097152
+  },
+  "vis.layers.6.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 126330880,
+   "bytes": 1024
+  },
+  "vis.layers.6.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 126331904,
+   "bytes": 2097152
+  },
+  "vis.layers.6.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 128429056,
+   "bytes": 1024
+  },
+  "vis.layers.6.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 128430080,
+   "bytes": 524288
+  },
+  "vis.layers.6.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 128954368,
+   "bytes": 1024
+  },
+  "vis.layers.6.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 128955392,
+   "bytes": 524288
+  },
+  "vis.layers.6.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 129479680,
+   "bytes": 1024
+  },
+  "vis.layers.6.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 129480704,
+   "bytes": 524288
+  },
+  "vis.layers.6.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 130004992,
+   "bytes": 1024
+  },
+  "vis.layers.6.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 130006016,
+   "bytes": 524288
+  },
+  "vis.layers.7.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 130530304,
+   "bytes": 1024
+  },
+  "vis.layers.7.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 130531328,
+   "bytes": 1024
+  },
+  "vis.layers.7.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 130532352,
+   "bytes": 1024
+  },
+  "vis.layers.7.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 130533376,
+   "bytes": 1024
+  },
+  "vis.layers.7.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 130534400,
+   "bytes": 4096
+  },
+  "vis.layers.7.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 130538496,
+   "bytes": 2097152
+  },
+  "vis.layers.7.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 132635648,
+   "bytes": 1024
+  },
+  "vis.layers.7.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 132636672,
+   "bytes": 2097152
+  },
+  "vis.layers.7.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 134733824,
+   "bytes": 1024
+  },
+  "vis.layers.7.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 134734848,
+   "bytes": 524288
+  },
+  "vis.layers.7.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 135259136,
+   "bytes": 1024
+  },
+  "vis.layers.7.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 135260160,
+   "bytes": 524288
+  },
+  "vis.layers.7.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 135784448,
+   "bytes": 1024
+  },
+  "vis.layers.7.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 135785472,
+   "bytes": 524288
+  },
+  "vis.layers.7.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 136309760,
+   "bytes": 1024
+  },
+  "vis.layers.7.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 136310784,
+   "bytes": 524288
+  },
+  "vis.layers.8.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 136835072,
+   "bytes": 1024
+  },
+  "vis.layers.8.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 136836096,
+   "bytes": 1024
+  },
+  "vis.layers.8.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 136837120,
+   "bytes": 1024
+  },
+  "vis.layers.8.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 136838144,
+   "bytes": 1024
+  },
+  "vis.layers.8.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 136839168,
+   "bytes": 4096
+  },
+  "vis.layers.8.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 136843264,
+   "bytes": 2097152
+  },
+  "vis.layers.8.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 138940416,
+   "bytes": 1024
+  },
+  "vis.layers.8.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 138941440,
+   "bytes": 2097152
+  },
+  "vis.layers.8.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 141038592,
+   "bytes": 1024
+  },
+  "vis.layers.8.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 141039616,
+   "bytes": 524288
+  },
+  "vis.layers.8.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 141563904,
+   "bytes": 1024
+  },
+  "vis.layers.8.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 141564928,
+   "bytes": 524288
+  },
+  "vis.layers.8.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 142089216,
+   "bytes": 1024
+  },
+  "vis.layers.8.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 142090240,
+   "bytes": 524288
+  },
+  "vis.layers.8.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 142614528,
+   "bytes": 1024
+  },
+  "vis.layers.8.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 142615552,
+   "bytes": 524288
+  },
+  "vis.layers.9.layer_norm1.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 143139840,
+   "bytes": 1024
+  },
+  "vis.layers.9.layer_norm1.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 143140864,
+   "bytes": 1024
+  },
+  "vis.layers.9.layer_norm2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 143141888,
+   "bytes": 1024
+  },
+  "vis.layers.9.layer_norm2.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 143142912,
+   "bytes": 1024
+  },
+  "vis.layers.9.mlp.fc1.bias": {
+   "shape": [
+    2048
+   ],
+   "offset": 143143936,
+   "bytes": 4096
+  },
+  "vis.layers.9.mlp.fc1.weight": {
+   "shape": [
+    2048,
+    512
+   ],
+   "offset": 143148032,
+   "bytes": 2097152
+  },
+  "vis.layers.9.mlp.fc2.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 145245184,
+   "bytes": 1024
+  },
+  "vis.layers.9.mlp.fc2.weight": {
+   "shape": [
+    512,
+    2048
+   ],
+   "offset": 145246208,
+   "bytes": 2097152
+  },
+  "vis.layers.9.self_attn.k_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 147343360,
+   "bytes": 1024
+  },
+  "vis.layers.9.self_attn.k_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 147344384,
+   "bytes": 524288
+  },
+  "vis.layers.9.self_attn.out_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 147868672,
+   "bytes": 1024
+  },
+  "vis.layers.9.self_attn.out_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 147869696,
+   "bytes": 524288
+  },
+  "vis.layers.9.self_attn.q_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 148393984,
+   "bytes": 1024
+  },
+  "vis.layers.9.self_attn.q_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 148395008,
+   "bytes": 524288
+  },
+  "vis.layers.9.self_attn.v_proj.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 148919296,
+   "bytes": 1024
+  },
+  "vis.layers.9.self_attn.v_proj.weight": {
+   "shape": [
+    512,
+    512
+   ],
+   "offset": 148920320,
+   "bytes": 524288
+  },
+  "vis.patch_embedding.weight": {
+   "shape": [
+    512,
+    3,
+    32,
+    32
+   ],
+   "offset": 149444608,
+   "bytes": 3145728
+  },
+  "vis.position_embedding": {
+   "shape": [
+    1,
+    50,
+    512
+   ],
+   "offset": 152590336,
+   "bytes": 51200
+  },
+  "vis.post_layernorm.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 152641536,
+   "bytes": 1024
+  },
+  "vis.post_layernorm.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 152642560,
+   "bytes": 1024
+  },
+  "vis.pre_layrnorm.bias": {
+   "shape": [
+    512
+   ],
+   "offset": 152643584,
+   "bytes": 1024
+  },
+  "vis.pre_layrnorm.weight": {
+   "shape": [
+    512
+   ],
+   "offset": 152644608,
+   "bytes": 1024
+  }
+ },
+ "parts": [
+  {
+   "file": "weights/ljv-f16.part0.bin",
+   "bytes": 92701696
+  },
+  {
+   "file": "weights/ljv-f16.part1.bin",
+   "bytes": 59943936
+  }
+ ],
+ "total_bytes": 152645632,
+ "special": {
+  "pad": 0,
+  "end": 1,
+  "user": 2,
+  "asst": 3,
+  "img": 4
+ },
+ "vocab_size": 8192,
+ "cfg": {
+  "vocab_size": 8192,
+  "d_model": 384,
+  "n_layer": 12,
+  "n_head": 6,
+  "inter": 704,
+  "n_expert": 4,
+  "top_k": 1,
+  "max_seq": 768,
+  "eps": 1e-05,
+  "n_img_token": 49,
+  "v_hidden": 512,
+  "v_layers": 12,
+  "v_heads": 8,
+  "v_inter": 2048,
+  "v_patch": 32,
+  "v_image": 224
+ }
+}

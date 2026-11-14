@@ -1,0 +1,11 @@
+ranks has 'ä ¸': 0
+ranks has 'ä ½': 18
+merge: ["ä","¸"]
+merge: ["ä","»"]
+merge: ["ä","º"]
+merge: ["ä","½"]
+merge: ["ä","¹"]
+merge: ["ĥ","½"]
+tok 3214: "ä½łå¥½"
+tok 266: "ï¼Į"
+tok 166: "ä"

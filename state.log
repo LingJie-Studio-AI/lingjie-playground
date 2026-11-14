@@ -1,0 +1,22 @@
+array<f16>: 0
+enable f16: 0
+fp16 raw upload: false
+biasOf: false
+slice fp16: false
+shader-f16: false
+--- gemm method ---
+gemm(aBuf, wName, M, N, K, biasName, outKey) {
+      // b = 权重 f32（bias 时追加 bias）
+      let bArr = this._f32(wName);
+      if (biasName) {
+        const bb = this._f32(biasName);
+        bArr = (() => { const c = new Float32Array(bArr.length + bb.length); c.set(bArr); c.set(bb, bArr.length); return c; })();
+        this._f32Bias = this._f32Bias || {};
+        this._f32Bias[wName] = bArr;
+        bArr = this._f32Bias[wName];
+      }
+      const bBuf = this.scratch("w_" + wName + (biasName ? "+b" : ""), bArr.length * 4);
+      this.device.queue.writeBuffer(bBuf, 0, bArr);
+      const c = this.scratch(outKey, M * N * 4);
+      this.run("gemm", [
+        { buffer: aBuf }, { buffer: bBuf }, { buf

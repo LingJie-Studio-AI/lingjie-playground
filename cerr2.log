@@ -1,0 +1,10 @@
+C:\Users\Coffee\DoubaoWork\chats\2026-11-13\new-chat-3\LingJieLocal\playground\lj-gpu.js:1
+﻿/* LingJieLV-Chat-v2-Flash WebGPU 引擎（v2，自检版）。 * * 数学与 lj-cpu.js 完全一致。加载后执行 GPU↔CPU 自检（5 token prefill， * 对比 top-1 与最大 logit 差），自检不过自动标记 GPU 不可用，UI 回退 CPU。 * * 权重布局（export_web.py）：所有矩阵 [out,in] 行主序 → 统一 gemm_
+...
+                                                                                                                                                                                                                           
+
+SyntaxError: Unexpected end of input
+    at wrapSafe (node:internal/modules/cjs/loader:1787:18)
+    at checkSyntax (node:internal/main/check_syntax:76:3)
+
+Node.js v24.17.0

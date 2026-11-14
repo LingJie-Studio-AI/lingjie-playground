@@ -1,0 +1,29 @@
+656:           { buffer: f2 }, { buffer: this.uni(50, VH, cfg.v_inter, 1) }], Math.ceil(50 * VH / 64));
+657:         this.run("add", [{ buffer: cur }, { buffer: f2 }, { buffer: cur }], Math.ceil(50 * VH / 64));
+658:       }
+659:       const post = this.scratch("v_post", 50 * VH * 4);
+660:       this.run("layernorm", [
+661:         { buffer: cur }, { buffer: this.bufs["vis.post_layernorm.weight"] },
+662:         { buffer: this.bufs["vis.post_layernorm.bias"] }, { buffer: post },
+663:         { buffer: this.uni2(50, VH) },
+664:       ], 50);
+665:       await dev.queue.onSubmittedWorkDone();
+666:       // 取 49 个 patch（去掉 cls）→ projector
+667:       const postCpu = await this.readback(post, 50 * VH * 4);
+668:       const pr = new Float32Array(P * VH);
+669:       pr.set(postCpu.subarray(VH, 50 * VH));
+670:       const prb = dev.createBuffer({ size: P * VH * 4, usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST });
+671:       dev.queue.writeBuffer(prb, 0, pr);
+672:       const pc1 = this.scratch("v_pc1", P * 768 * 4);
+673:       this.run("gemm", [{ buffer: prb }, { buffer: this.bufs["proj.fc1.weight"] },
+674:         { buffer: pc1 }, { buffer: this.uni(P, 768, VH, 1) }], Math.ceil(P * 768 / 64));
+675:       this.run("gelu", [{ buffer: pc1 }], Math.ceil(P * 768 / 64));
+676:       const pc2 = this.scratch("v_pc2", P * D * 4);
+677:       this.run("gemm", [{ buffer: pc1 }, { buffer: this.bufs["proj.fc2.weight"] },
+678:         { buffer: pc2 }, { buffer: this.uni(P, D, 768, 1) }], Math.ceil(P * D / 64));
+679:       await dev.queue.onSubmittedWorkDone();
+680:       return await this.readback(pc2, P * D * 4);
+681:     }
+682:   root.LJVGPU = LJVGPU;
+683: })(typeof window !== "undefined" ? window : globalThis);
+684: 
