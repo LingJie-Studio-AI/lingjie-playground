@@ -380,7 +380,7 @@
       }
       el.ctxHint.textContent = "上下文 " + ids.length + "/" + cfg.max_seq;
       const t0 = performance.now();
-      let logits;
+      let logits = new Float32Array(manifest.cfg.vocab_size);
       const useG = useGPU && gpuOk;
       if (useG) {
         logits = await gpu.prefill(ids, imgPixels);
